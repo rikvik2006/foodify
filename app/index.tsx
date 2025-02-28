@@ -1,15 +1,10 @@
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import PageWrapper from "@/components/pageWrapper";
 
 export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+	return (
+		<PageWrapper>
+			<Text>Home</Text>
+		</PageWrapper>
+	);
 }
