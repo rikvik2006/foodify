@@ -13,7 +13,7 @@ export default function PageWrapper({
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		marginLeft: 16,
-		marginRight: 16,
+		paddingLeft: 16,
+		paddingRight: 16,
 	},
 });
