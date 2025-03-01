@@ -1,6 +1,8 @@
 import { Text, StyleSheet } from "react-native";
 import PageWrapper from "@/components/pageWrapper";
 import { stylesVariables } from "@/styles/variable";
+import SectionTitle from "@/components/sectionTitle";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function Index() {
 	return (
@@ -9,6 +11,12 @@ export default function Index() {
 			<Text style={styles.welcomeMessage}>
 				Today is an amazing day to track your calories
 			</Text>
+			<SectionTitle>Nutrition</SectionTitle>
+			<Card style={{ height: 500 }}>
+				<CardContent>
+					<Text>Card Content</Text>
+				</CardContent>
+			</Card>
 		</PageWrapper>
 	);
 }
