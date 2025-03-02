@@ -3,6 +3,8 @@ import PageWrapper from "@/components/pageWrapper";
 import { stylesVariables } from "@/styles/variable";
 import SectionTitle from "@/components/sectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
+import NutritionAdd from "@/components/nutritionAdd";
+import { Button } from "@/components/ui/button";
 
 export default function Index() {
 	return (
@@ -14,7 +16,10 @@ export default function Index() {
 			<SectionTitle>Nutrition</SectionTitle>
 			<Card style={{ height: 500 }}>
 				<CardContent>
-					<Text>Card Content</Text>
+					{/* kcal and maxKcal need to be dynamic */}
+					<NutritionAdd title="Breakfast" kcal={250} maxKcal={300}>
+						☕️
+					</NutritionAdd>
 				</CardContent>
 			</Card>
 		</PageWrapper>
