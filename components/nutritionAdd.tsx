@@ -2,6 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { stylesVariables } from "@/styles/variable";
 import Svg, { Circle } from "react-native-svg";
 import { Button } from "./ui/button";
+import { Plus } from "lucide-react-native";
 
 interface NutritionAddProps {
 	children: React.ReactNode;
@@ -68,7 +69,9 @@ export default function NutritionAdd({
 					</Text>
 				</View>
 			</View>
-			<Button size="icon">+</Button>
+			<Button size="icon" style={{ borderRadius: 50 }}>
+				<Plus color="white" size={20} strokeWidth={3} />
+			</Button>
 		</View>
 	);
 }

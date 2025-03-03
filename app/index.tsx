@@ -4,7 +4,6 @@ import { stylesVariables } from "@/styles/variable";
 import SectionTitle from "@/components/sectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 import NutritionAdd from "@/components/nutritionAdd";
-import { Button } from "@/components/ui/button";
 
 export default function Index() {
 	return (
