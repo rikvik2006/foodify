@@ -4,6 +4,7 @@ import { stylesVariables } from "@/styles/variable";
 import SectionTitle from "@/components/sectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 import NutritionAdd from "@/components/nutritionAdd";
+import { Divider } from "@/components/ui/divider";
 
 export default function Index() {
 	return (
@@ -13,18 +14,33 @@ export default function Index() {
 				Today is an amazing day to track your calories
 			</Text>
 			<SectionTitle>Nutrition</SectionTitle>
-			<Card style={{ height: 500 }}>
+			<Card>
 				<CardContent>
 					{/* kcal and maxKcal need to be dynamic */}
 					<NutritionAdd title="Breakfast" kcal={250} maxKcal={300}>
 						☕️
 					</NutritionAdd>
+					<Divider
+						color={stylesVariables.colors.cloud.normal}
+						oreintation="horizontal"
+						style={{ marginVertical: 16 }}
+					/>
 					<NutritionAdd title="Launch" kcal={850} maxKcal={1000}>
 						🍱
 					</NutritionAdd>
+					<Divider
+						color={stylesVariables.colors.cloud.normal}
+						oreintation="horizontal"
+						style={{ marginVertical: 16 }}
+					/>
 					<NutritionAdd title="Dinner" kcal={900} maxKcal={1000}>
 						🥗
 					</NutritionAdd>
+					<Divider
+						color={stylesVariables.colors.cloud.normal}
+						oreintation="horizontal"
+						style={{ marginVertical: 16 }}
+					/>
 					<NutritionAdd title="Snaks" kcal={80} maxKcal={300}>
 						🍎
 					</NutritionAdd>
