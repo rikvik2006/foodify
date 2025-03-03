@@ -20,6 +20,15 @@ export default function Index() {
 					<NutritionAdd title="Breakfast" kcal={250} maxKcal={300}>
 						☕️
 					</NutritionAdd>
+					<NutritionAdd title="Launch" kcal={850} maxKcal={1000}>
+						🍱
+					</NutritionAdd>
+					<NutritionAdd title="Dinner" kcal={900} maxKcal={1000}>
+						🥗
+					</NutritionAdd>
+					<NutritionAdd title="Snaks" kcal={80} maxKcal={300}>
+						🍎
+					</NutritionAdd>
 				</CardContent>
 			</Card>
 		</PageWrapper>

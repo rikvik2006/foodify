@@ -18,11 +18,13 @@ interface ButtonProps extends PressableProps {
 		| "destructive"
 		| "destructiveSubtle"
 		| "white";
+	size?: "default" | "sm" | "lg" | "icon";
 }
 
 function Button({
 	children,
 	variant = "primary",
+	size = "default",
 	style,
 	...props
 }: ButtonProps) {
@@ -81,12 +83,42 @@ function Button({
 		}
 	};
 
+	const getButtonSize = () => {
+		switch (size) {
+			case "sm":
+				return {
+					height: 32,
+					borderRadius: 6,
+					paddingHorizontal: 12,
+					fontSize: 12,
+				} as ViewStyle;
+			case "lg":
+				return {
+					height: 40,
+					borderRadius: 6,
+					paddingHorizontal: 32,
+				} as ViewStyle;
+			case "icon":
+				return {
+					height: 36,
+					width: 36,
+				} as ViewStyle;
+			default:
+				return {
+					height: 36,
+					paddingVertical: 8,
+					paddingHorizontal: 16,
+				} as ViewStyle;
+		}
+	};
+
 	return (
 		<Pressable
 			style={({ pressed }) => {
 				const combinedStyles = [
 					styles.button,
 					getButtonStyles(),
+					getButtonSize(),
 					pressed && getPressedStyles(),
 					style,
 				];
@@ -105,8 +137,6 @@ function Button({
 
 const styles = StyleSheet.create({
 	button: {
-		paddingVertical: 10,
-		paddingHorizontal: 16,
 		borderRadius: 6,
 		justifyContent: "center",
 		alignItems: "center",

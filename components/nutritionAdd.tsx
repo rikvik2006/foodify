@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import { stylesVariables } from "@/styles/variable";
 import Svg, { Circle } from "react-native-svg";
+import { Button } from "./ui/button";
 
 interface NutritionAddProps {
 	children: React.ReactNode;
@@ -67,7 +68,7 @@ export default function NutritionAdd({
 					</Text>
 				</View>
 			</View>
-			<Text>Button</Text>
+			<Button size="icon">+</Button>
 		</View>
 	);
 }
