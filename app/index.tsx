@@ -5,6 +5,7 @@ import SectionTitle from "@/components/sectionTitle";
 import { Card, CardContent } from "@/components/ui/card";
 import NutritionAdd from "@/components/nutritionAdd";
 import { Divider } from "@/components/ui/divider";
+import BodyMetricsCard from "@/components/bodyMetricsCard";
 
 export default function Index() {
 	return (
@@ -13,6 +14,7 @@ export default function Index() {
 			<Text style={styles.welcomeMessage}>
 				Today is an amazing day to track your calories
 			</Text>
+
 			<SectionTitle>Nutrition</SectionTitle>
 			<Card>
 				<CardContent>
@@ -46,6 +48,9 @@ export default function Index() {
 					</NutritionAdd>
 				</CardContent>
 			</Card>
+
+			<SectionTitle>Body weight</SectionTitle>
+			<BodyMetricsCard typeOfMetric="bodyWeight" />
 		</PageWrapper>
 	);
 }
