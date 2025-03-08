@@ -1,4 +1,6 @@
 import { Stack } from "expo-router";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { StatusBar } from "expo-status-bar";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
 import * as SplashScreen from "expo-splash-screen";
@@ -19,5 +21,12 @@ export default function RootLayout() {
 		return null;
 	}
 
-	return <Stack screenOptions={{ headerShown: false }} />;
+	return (
+		<GestureHandlerRootView>
+			<Stack screenOptions={{ headerShown: false }}>
+				<Stack.Screen name="(tabs)" />
+			</Stack>
+			<StatusBar style="auto" />
+		</GestureHandlerRootView>
+	);
 }
